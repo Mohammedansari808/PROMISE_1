@@ -8,7 +8,7 @@ containerAnime.setAttribute("class","container")
 let rowAnime = document.createElement("div");
 rowAnime.setAttribute("class","row")
 
-
+///////////FETCHING THE FACTS OF ANIME////////////////////
 async function animeFetch (){
 
     let anime = await fetch ("https://anime-facts-rest-api.herokuapp.com/api/v1")
@@ -19,7 +19,7 @@ async function animeFetch (){
             throw new Error ("Not found pls check the url")
         }
         for (let i=0;i<animeData.data.length;i++){
-            
+            ///////////////////////FETCHING THE ANIME NAME WITH HELP OF PREVIOUS FECTCH AND THE LOOP/////////////////////
             async function animeFetchFact(){
                 let animeF = await fetch (`https://anime-facts-rest-api.herokuapp.com/api/v1/${animeData.data[i].anime_name}`)
                 let animeFData = await animeF.json()
@@ -32,8 +32,7 @@ async function animeFetch (){
 
                     let colAnime = document.createElement("div");
                     colAnime.setAttribute("class","col-md-12");
-                    
-
+                    /////////////// CREATING THE ANIME_NAME AND IMAGE OF THE ANIME///////////////////////
                     let dAnime = document.createElement("div");
                     dAnime.setAttribute("class","HI-anime");
                     dAnime.innerHTML=`
@@ -43,7 +42,7 @@ async function animeFetch (){
                     let title=document.createElement("div")
                     title.setAttribute("class","anime-title")
                     title.innerHTML="FACTS"
-
+                    /////////////////////////FETCHING THE FACTS FOR EACH AND EVERY ANIME NAME WITH THE HELP OF PREVIUOS FETCH////////////////////
                     let factCol = document.createElement("p")
                     factCol.setAttribute("class","anime-facts")
                     for (let i=0;i<animeFData.data.length;i++){
@@ -69,7 +68,7 @@ async function animeFetch (){
     } catch (error) {
         console.log(error)
     }  
-    // let dDog = await dog
+   
 }
 animeFetch()
 containerAnime.append(rowAnime);
