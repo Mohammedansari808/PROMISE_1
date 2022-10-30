@@ -122,7 +122,7 @@ p{
   #spin-blade{
     height:100px;
     width:100px;
-    position:absolute;
+    position:fixed;
     animation-name: spin;
     animation-duration: 8s;
     animation-iteration-count: infinite;
@@ -142,7 +142,7 @@ p{
   #spin2-blade{
     height:100px;
     width:100px;
-    position:absolute;
+    position:fixed;
     animation-name: spin2;
     animation-duration: 5s;
     animation-iteration-count: infinite;
