@@ -25,7 +25,7 @@ animation-iteration-count: infinite;
 }
 /* /////////////BG///////////////// */
 body{
-    background-image: url("./anime-bg-img2.jpg");
+    background-image: url("./assets/anime-bg-img2.jpg");
     background-attachment: fixed;
     overflow-x: hidden;
     
@@ -53,7 +53,7 @@ transition: ease 0.8s;
     
 /*  //////////////////FOR COLUMN //////////////// */
 .col-md-12{
-    background-image: url("./anime-bg-img.jpg") ;
+    background-image: url("./assets/anime-bg-img.jpg") ;
 background-size: 1200px;
 display: flex;
 justify-content: center;
