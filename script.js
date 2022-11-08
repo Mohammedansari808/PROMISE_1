@@ -13,7 +13,7 @@ async function animeFetch (){
 // FETCHING THE WHOLE DATA FROM API //
     let anime = await fetch ("https://anime-facts-rest-api.herokuapp.com/api/v1")
     let animeData = await anime.json()
-    console.log(animeData);
+    
     try {
         if (Response ==200){
             throw new Error ("Not found pls check the url")
@@ -27,8 +27,7 @@ async function animeFetch (){
                     if (Response == 200) {
                         throw new Error ("Not found pls check the url")
                     }
-                    console.log(animeFData);
-
+                   
 // CREATING THE ELEMENTS AND FETCHING THE EACH DATA AND APPENDING TO HTML
                     let colAnime = document.createElement("div");
                     colAnime.setAttribute("class","col-md-12");
